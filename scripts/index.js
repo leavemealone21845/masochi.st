@@ -184,7 +184,7 @@ function projects() {
 
 function domains() {
     updatePage(
-        "<a href='https://masochi.st/' target='_blank' style='color: white;'>masochi.st</a>, <a href='https://doxe.rs/' target='_blank' style='color: white;'>doxe.rs</a>, <a href='https://swatte.rs/' target='_blank' style='color: white;'>swatte.rs</a>, ",
+        "<a href='https://masochi.st/' target='_blank' style='color: white;'>masochi.st</a>, <a href='https://doxe.rs/' target='_blank' style='color: white;'>doxe.rs</a>, <a href='https://swatte.rs/' target='_blank' style='color: white;'>swatte.rs</a>",
         "projects"
     );
 }
