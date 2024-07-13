@@ -159,25 +159,16 @@ function memberCall(pfpSrc, textContent, user) {
 }
 
 function updatePage(htmlContent, pageTitle) {
-    if (transitionActive) return; // Prevent multiple simultaneous updates
-
-    transitionActive = true; // Set transition active
-
-    // Update document title (assuming you don't need '@fail; ' prefix)
+    if (transitionActive) return;
+    transitionActive = true;
     document.title = "@fail; " + pageTitle;
-
-    // Get display text element
     const displayText = document.querySelector(".display-text");
 
     if (current_page !== "main") {
-        // If current page is not 'main', transition to 'main'
         current_page = "main";
-
-        // Get elements for transition
         const randomGif = document.getElementById("random-gif");
         const pfpImage = document.getElementById("pfp-image");
 
-        // Apply transition effects
         pfpImage.style.opacity = 0;
         randomGif.style.display = "block";
         randomGif.style.opacity = 1;
@@ -185,13 +176,9 @@ function updatePage(htmlContent, pageTitle) {
         pfpImage.style.display = "none";
         displayText.style.opacity = 1;
 
-        // Reset transition flag
         transitionActive = false;
     } else {
-        // If already on 'main' page, just update content
         displayText.innerHTML = htmlContent;
-
-        // Reset transition flag
         transitionActive = false;
     }
 }
