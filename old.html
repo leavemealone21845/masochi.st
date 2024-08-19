@@ -51,6 +51,13 @@
 
     <div class="snowflakes"></div>
 
+    <script>
+        window.onload = function() {
+            if (window.location.pathname === '/old.html') {
+                window.location.replace('/old');
+            }
+        };
+    </script>
     <script src="scripts/snowflakes.js"></script>
     <script src="scripts/index.js"></script>
 </body>
